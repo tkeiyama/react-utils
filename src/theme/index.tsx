@@ -3,7 +3,15 @@ import { createContext, FC, ReactNode, useContext, useEffect, useState } from "r
 export type ThemeTypes = "light" | "dark";
 
 export interface ThemeContextProps {
+  /**
+   * An application's theme.
+   */
   theme: ThemeTypes;
+  /**
+   * A handler to change a theme.
+   * 
+   * @param theme which sets to a next theme.
+   */
   changeTheme: (theme?: ThemeTypes) => void;
 }
 
@@ -19,10 +27,22 @@ const switchTheme = (theme: ThemeTypes): ThemeTypes => {
 };
 
 export interface ThemeProviderProps {
+  /**
+   * Component(s) which need to get a theme.
+   */
   children: ReactNode;
+  /**
+   * A default theme.
+   */
   defaultTheme: ThemeTypes;
 }
 
+/**
+ * You need to wrap a root component with this provider.
+ * 
+ * @param defaultTheme which provided to an application as the default theme.
+ * @default "light"
+ */
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children, defaultTheme }) => {
   const [currentTheme, setTheme] = useState<ThemeContextProps["theme"]>(defaultTheme);
 
@@ -77,4 +97,9 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({ children, defaultTheme }
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };
 
+/**
+ * A react hook returns `theme` and `changeTheme`.
+ * 
+ * This function won't work unless you wrap component(s) by the `ThemeProvider` component.
+ */
 export const useTheme = () => useContext(ThemeContext);

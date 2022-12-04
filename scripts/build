@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# clean
+pnpm clean
+
+# build
+pnpm tsc --project tsconfig.build.json

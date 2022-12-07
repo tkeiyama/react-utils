@@ -9,7 +9,6 @@
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",
-    "**/.next",
     "**/lib"
   ],
   "plugins": [

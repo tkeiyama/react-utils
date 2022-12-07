@@ -9,7 +9,7 @@ export interface ThemeContextProps {
   theme: ThemeTypes;
   /**
    * A handler to change a theme.
-   * 
+   *
    * @param theme which sets to a next theme.
    */
   changeTheme: (theme?: ThemeTypes) => void;
@@ -39,7 +39,7 @@ export interface ThemeProviderProps {
 
 /**
  * You need to wrap a root component with this provider.
- * 
+ *
  * @param defaultTheme which provided to an application as the default theme.
  * @default "light"
  */
@@ -99,7 +99,7 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({ children, defaultTheme }
 
 /**
  * A react hook returns `theme` and `changeTheme`.
- * 
+ *
  * This function won't work unless you wrap component(s) by the `ThemeProvider` component.
  */
 export const useTheme = () => useContext(ThemeContext);

@@ -63,7 +63,7 @@ export type PolymorphicRef<Element extends React.ElementType> = React.ComponentP
  * @example
  * type Sample = PolymorphicComponentProp<Element, {
  *   hello: "foo" | "bar";
- *  }>;
+ * }>;
  */
 export type PolymorphicComponentProp<
   Element extends React.ElementType,
@@ -78,7 +78,7 @@ export type PolymorphicComponentProp<
  * @example
  * type Sample = PolymorphicComponentPropWithRef<Element, {
  *   hello: "foo" | "bar";
- *  }>;
+ * }>;
  */
 export type PolymorphicComponentPropWithRef<
   Element extends React.ElementType,

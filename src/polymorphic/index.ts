@@ -56,10 +56,6 @@ export type PolymorphicRef<Element extends React.ElementType> = React.ComponentP
 /* ------------------------------
  * Polymorphic component types
  * ------------------------------*/
-type ForwardRefExoticComponent<E extends React.ElementType, Props = {}> = React.ForwardRefExoticComponent<
-  Merge<React.ComponentPropsWithRef<E>, Props & AsProp<E>>
->;
-
 /**
  * Make a strongly typed forwardRef component.
  *

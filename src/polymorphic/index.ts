@@ -56,25 +56,4 @@ export type PolymorphicRef<Element extends React.ElementType> = React.ComponentP
 /* ------------------------------
  * Polymorphic component types
  * ------------------------------*/
-/**
- * Make a strongly typed forwardRef component.
- *
- * @example
- * interface Props {
- *   something: string
- * }
- * const Text: ForwardRefComponent<"button", Props> = React.forwardRef(
- *   (
- *     { as, something, children, ...props }, // Props with children and element's types based on the given element name
- *     ref // React.ForwardedRef<HTMLButtonElement>
- *   )
- * ) => { ... }
- */
-export interface ForwardRefComponent<Element extends React.ElementType, Props = {}>
-  extends ForwardRefExoticComponent<Element, Props>
-{
-  <E extends Element>(
-    props: Props,
-    ref: PolymorphicRef<E>,
-  ): React.ReactElement | null;
-}
+

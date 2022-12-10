@@ -51,11 +51,11 @@ export interface AsProp<Element extends React.ElementType> {
  */
 export type Merge<P1 = {}, P2 = {}> = Omit<P1, keyof P2> & P2;
 
+export type PolymorphicRef<Element extends React.ElementType> = React.ComponentPropsWithRef<Element>["ref"];
+
 /* ------------------------------
  * Polymorphic component types
  * ------------------------------*/
-export type PolymorphicRef<Element extends React.ElementType> = React.ComponentPropsWithRef<Element>["ref"];
-
 type ForwardRefExoticComponent<E extends React.ElementType, Props = {}> = React.ForwardRefExoticComponent<
   Merge<React.ComponentPropsWithRef<E>, Props & AsProp<E>>
 >;

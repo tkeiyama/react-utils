@@ -61,7 +61,7 @@ export type PolymorphicRef<Element extends React.ElementType> = React.ComponentP
  * Creates a component type which has given props and the element's types determined by Element.
  * 
  * @example
- * type Sample = PolymorphicComponentPropWithRef<Element, {
+ * type Sample = PolymorphicComponentProp<Element, {
  *   hello: "foo" | "bar";
  *  }>;
  */

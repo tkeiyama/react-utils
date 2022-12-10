@@ -1,19 +1,46 @@
 import React from "react";
-import { ForwardRefComponent } from ".";
+import { PolymorphicComponentPropWithRef, PolymorphicRef } from ".";
 
-type Rainbow = "red" | "blue" | "yellow" | "violet";
+type Variants = "primary" | "secondary";
 
-interface TextProps {
-  color?: Rainbow | "black";
-}
+type ButtonBaseProps<Element extends React.ElementType> = PolymorphicComponentPropWithRef<Element, {
+  variant: Variants;
+}>;
 
-export const Text: ForwardRefComponent<"div", TextProps> = React.forwardRef((
-  { as, color, children, ...props },
-  ref,
+type ButtonBaseComponent = <Element extends React.ElementType = "button">(
+  props: ButtonBaseProps<Element>,
+) => React.ReactElement | null;
+
+const ButtonBase: ButtonBaseComponent = React.forwardRef(
+  <Element extends React.ElementType = "button">(
+    { as, children, variant, ...props }: ButtonBaseProps<Element>,
+    forwardedRef: PolymorphicRef<Element>,
+  ) => {
+    const Component = as ?? "button";
+    return <Component {...props} ref={forwardedRef}>{children}</Component>;
+  },
+);
+
+type LinkButtonProps = {
+  hello: "foo" | "bar";
+} & ButtonBaseProps<"a">;
+
+const LinkButton = React.forwardRef<HTMLAnchorElement, LinkButtonProps>((
+  { href, variant, hello, children, onClick, ...props },
+  forwardedRef,
 ) => {
-  const Component = as ?? "span";
+  return <ButtonBase {...props} as="a" variant={variant} ref={forwardedRef} onClick={onClick}>{children}</ButtonBase>;
+});
 
-  const style = color ? { style: { color } } : {};
+type ButtonProps = {
+  bye: "foo" | "bar";
+} & ButtonBaseProps<"button">;
 
-  return <Component {...props} {...style} ref={ref}>{children}</Component>;
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((
+  { variant, bye, children, onClick, ...props },
+  forwardedRef,
+) => {
+  return (
+    <ButtonBase {...props} as="button" variant={variant} ref={forwardedRef} onClick={onClick}>{children}</ButtonBase>
+  );
 });

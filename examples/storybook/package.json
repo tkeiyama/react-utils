@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 12281 -c .storybook --ci"
+  },
+  "dependencies": {
+    "@tkeiyama/react-dev-utils": "link:../.."
+  },
+  "devDependencies": {
+    "@storybook/react": "^6.5.13"
+  }
+}

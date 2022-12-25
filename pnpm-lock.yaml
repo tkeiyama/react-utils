@@ -5,14 +5,14 @@ importers:
   .:
     specifiers:
       '@tkeiyama/react-theme': ^0.0.1
-      '@tkeiyama/react-types': ^0.0.3
+      '@tkeiyama/react-types': ^0.0.5
       dprint: ^0.34.1
       np: ^7.6.2
       typescript: ^4.9.4
       vite: ^4.0.3
     dependencies:
       '@tkeiyama/react-theme': 0.0.1
-      '@tkeiyama/react-types': 0.0.3
+      '@tkeiyama/react-types': 0.0.5
     devDependencies:
       dprint: 0.34.1
       np: 7.6.2
@@ -462,8 +462,10 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@tkeiyama/react-types/0.0.3:
-    resolution: {integrity: sha512-QXojtebFjFMFRR63Zm9/P7hgM2u+peQDBzSXK8HIc2jeKgAGlXh7nouY0phUjrY74vaPmH78WwioICakAAotfQ==}
+  /@tkeiyama/react-types/0.0.5:
+    resolution: {integrity: sha512-xqzWRdhzOrDByZDy3mz+6He9mIYystuetaAwWJGHXyloBL8dDEPXSPuJSfBXVOQryuE7IAuFeatdbgOOBCVpIw==}
+    dependencies:
+      '@tkeiyama/react-types': 'link:'
     dev: false
 
   /@types/cacheable-request/6.0.3:

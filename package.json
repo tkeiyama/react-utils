@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@tkeiyama/react-theme": "^0.0.1",
-    "@tkeiyama/react-types": "^0.0.3"
+    "@tkeiyama/react-types": "^0.0.5"
   },
   "devDependencies": {
     "dprint": "^0.34.1",

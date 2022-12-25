@@ -1,0 +1,9 @@
+{
+  "*.{js,ts,jsx,tsx}": [
+    "bash -c 'tsc --noEmit --incremental false'",
+    "dprint fmt --verbose"
+  ],
+  "*.{md,json}": [
+    "dprint fmt --verbose"
+  ]
+}

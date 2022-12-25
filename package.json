@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "files": [
-    "index.js"
+    "dist"
   ],
   "scripts": {
     "build": "scripts/build",

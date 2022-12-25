@@ -1,2 +1,1 @@
-export * from "./polymorphic";
-export * from "./theme";
+export * from '@tkeiyama/react-theme'

@@ -1,7 +1,6 @@
-# React utils
+# @tkeiyama/react-utils
 
-This provides utils for React to develop easily.
-Most utils is not ready for production.
+Provides useful packages for a React application.
 
 ## Installation
 
@@ -9,6 +8,8 @@ Most utils is not ready for production.
 pnpm add @tkeiyama/react-utils
 ```
 
-## Contributing
+## Packages
 
-Any contributions are welcomed :)
+| name                  | description                               |
+| --------------------- | ----------------------------------------- |
+| @tkeiyama/react-theme | A theme provider for a React application. |

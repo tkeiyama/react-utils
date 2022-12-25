@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# build
-pnpm build
-
-# publish
-pnpm np

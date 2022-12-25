@@ -6,10 +6,12 @@ importers:
     specifiers:
       '@tkeiyama/react-theme': ^0.0.1
       np: ^7.6.2
+      typescript: ^4.9.4
     dependencies:
       '@tkeiyama/react-theme': 0.0.1
     devDependencies:
       np: 7.6.2
+      typescript: 4.9.4
 
   examples/with-next-pages:
     specifiers:
@@ -2576,7 +2578,6 @@ packages:
     resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: false
 
   /unique-string/2.0.0:
     resolution: {integrity: sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==}

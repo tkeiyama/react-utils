@@ -15,7 +15,7 @@ export default function Index() {
       </div>
       <div>
         <Test>Div</Test>
-        <Test as="button" backgroundColor="red" type="button">Button</Test>
+        <Test as="button" backgroundColor="blue" type="button">Button</Test>
       </div>
     </div>
   );

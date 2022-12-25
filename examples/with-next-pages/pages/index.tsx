@@ -1,5 +1,5 @@
 import { useTheme } from "@tkeiyama/react-utils";
-import { Test } from '../src/test'
+import { Test } from "../src/test";
 
 export default function Index() {
   const { theme, changeTheme } = useTheme();

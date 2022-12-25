@@ -1,5 +1,5 @@
-import { ElementType, forwardRef, ReactElement } from "react";
 import { PolymorphicComponentPropWithRef, PolymorphicRef } from "@tkeiyama/react-utils";
+import { ElementType, forwardRef, ReactElement } from "react";
 
 export type TestProps<Element extends ElementType = "div"> = PolymorphicComponentPropWithRef<Element, {
   backgroundColor?: "red" | "blue";

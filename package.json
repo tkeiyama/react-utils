@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "@tkeiyama/react-theme": "^0.0.1"
+  },
+  "devDependencies": {
+    "np": "^7.6.2"
   }
 }

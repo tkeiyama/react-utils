@@ -4,4 +4,4 @@
 pnpm build
 
 # release
-pnpm dlx np --yolo
+pnpm np --yolo

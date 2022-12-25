@@ -4,4 +4,4 @@
 rm -rf dist
 
 # build
-pnpm tsc src/index.ts --outDir dist
+pnpm tsc src/index.ts --outDir dist --declaration

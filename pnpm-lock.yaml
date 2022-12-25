@@ -5,10 +5,12 @@ importers:
   .:
     specifiers:
       '@tkeiyama/react-theme': ^0.0.1
+      '@tkeiyama/react-types': ^0.0.2
       np: ^7.6.2
       typescript: ^4.9.4
     dependencies:
       '@tkeiyama/react-theme': 0.0.1
+      '@tkeiyama/react-types': 0.0.2
     devDependencies:
       np: 7.6.2
       typescript: 4.9.4
@@ -256,6 +258,10 @@ packages:
     resolution: {integrity: sha512-uo4CuLqAbJ2DEr6JJFGbR1cq3dQeHQWYkIfHwKVpHWuNMbO15/yECXwDEsJNRVv9BA3ve5Z3yU1vHKQzY+zgxg==}
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /@tkeiyama/react-types/0.0.2:
+    resolution: {integrity: sha512-DnM1ywhFR5SSfIJ0Y/TmqKNktMLGQPmcGdmvjIYL+5K2GNKcqXIRsWRteiK1AAo6ejjQc6uEHD5GzEfM8cCazA==}
     dev: false
 
   /@types/cacheable-request/6.0.3:
